@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #a3a3a3;
+    color: #333;
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.8;
+}
+
+header {
+    padding: 40px 0;
+    background-color: #23004b;
+    text-align: left;
+    color: #000;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+}
+
+header h2 {
+    font-size: 1.8em;
+    font-style: italic;
+}
+
+nav {
+    background-color: #343a40;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1FR);
+    justify-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+nav ul li a:hover {
+    color: #ddb3ff;
+    transition: color 0.3s ease;
+}
+
+.container {
+    max-width: 1100px;  
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.imagen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.imagen div {
+    flex: 1 1 calc(33.333% - 20px); 
+    margin-bottom: 20px;
+}
+
+.imagen img, .imagen video {
+    width: 100%; 
+    height: auto;
+}
+h3 {
+    color: #23004b;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+p, ul {
+    margin: 20px 0;
+    line-height: 1.7;
+}
+
+ul {
+    padding-left: 30px;
+    list-style-type: circle;
+}
+
+.experiencia-item {
+    margin-bottom: 30px;
+}
+
+footer {
+    padding: 30px;
+    background-color: #343a40;
+    text-align: right;
+    color: #000;
+}
+.contatos{
+    text-align: center;
+}
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.redes-sociais img {
+    margin: 0 10px;
+    width: 40px;
+}
+
+.redes-sociais a {
+    color: #000;
+    font-size: 1.1em;
+    justify-content: center
+    
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    header {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header h2 {
+        font-size: 1.4em;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .redes-sociais img {
+        width: 35px;
+    }
+
+    nav ul {
+        grid-template-columns: 1fr;
+    }
+}
